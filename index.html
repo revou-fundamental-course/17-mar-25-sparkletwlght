@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tugas RevoU </title>
+    <link rel ="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer> </script>
+
+</head>
+<body>
+    <h1> Welcome To Katik! </h1>
+    <h3> Hi, selamat datang di Katik. </h3>
+    <h3> Sebuah web applikasi sederhana yang berfungsi untuk menghitung luas dan keliling bangun datar. </h3>
+
+    <div class = "container-column"> 
+        <button class="btn-Persegi" onclick="showSection('luaspersegi')"> Luas Persegi </button>
+        <button class="btn-PersegiPanjang" onclick="showSection('luasppanjang')"> Luas Persegi Panjang </button>
+    </div>
+
+    <div class ="container-column">
+        <button class="btn-Persegi" onclick="showSection('kellpersegi')"> Keliling Persegi </button>
+        <button class="btn-PersegiPanjang" onclick="showSection('kellppanjang')"> Keliling P. Panjang </button>
+    </div>
+
+
+    <!-- luas persegi -->
+    <div id="luaspersegi" class="hidden">
+        <div class="container1">
+            <h2> Luas Persegi </h2>
+        </div>
+        <div class="container">
+            <img src="aset/persegi.png" width="200" height="200">
+            <h5> Rumus Luas Persegi:</h5>
+            <h5> Luas = Sisi x Sisi </h5>
+        </div>
+        <div class="hasil-luas-persegi">
+            <h2> Hitung Luas Persegi </h2>
+            <div class="formbox">
+                <input type="text" id="inputsisi" placeholder="Masukan angka">
+                <p id="hasilluaspersegi"></p>
+                <button class="submit" id="hitungluaspersegi" onclick="showSection('hasil-luas-persegi')"> Hitung </button>
+                <button class="reset" id="resetluaspersegi" onclick="showSection('ulang-luas-persegi')"> Reset </button>
+            </div>
+        </div>    
+    </div>
+
+
+    <!-- keliling persegi -->
+    <div id="kellpersegi" class="hidden">
+        <div class="container1">
+            <h2> Keliling Persegi </h2>
+        </div>
+        <div class="container">
+            <img src="aset/persegi.png" width="200" height="200">
+            <h5> Rumus Keliling Persegi:</h5>
+            <h5> Luas = 4 x Sisi </h5>
+        </div>
+        <div class="hasil-kell-persegi">
+            <h2> Hitung Keliling Persegi </h2>
+            <form class="formbox">
+                <input type="text" id="inputsisip" placeholder="Masukan angka">
+                <p id="hasilkellpersegi"></p>
+                <button class="submit" id="hitungkellpersegi" onclick="showSection('hasil-kell-persegi')"> Hitung </button>
+                <button class="reset" id="resetkellpersegi" onclick="showSection('ulang-kell-persegi')"> Reset </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- luas persegi panjang -->
+    <div id="luasppanjang" class="hidden">
+        <div class="container1">
+            <h2> Luas Persegi Panjang </h2>
+        </div>
+        <div class="container">
+            <img src="aset/ppanjang.png" width="400" height="200">
+            <h5> Rumus Luas Persegi Panjang:</h5>
+            <h5> Luas = Panjang x Lebar </h5>
+        </div>
+        <div class="hasil-luas-ppanjang">
+            <h2> Hitung Luas Persegi Panjang </h2>
+            <div class="formbox">
+                <input type="text" id="panjanginput" required placeholder="Masukan panjang">
+                <input type="text" id="lebarinput" required placeholder="Masukan lebar">
+                <p id="hasilluaspp"></p>
+                <button class="submit" id="hitungluaspp" onclick="showSection('hasil-luas-pp')"> Hitung </button>
+                <button class="reset" id="resetluaspp" onclick="showSection('ulang-luas-pp')"> Reset </button>
+            </div>
+        </div>    
+    </div>
+
+    <!-- keliling persegi panjang -->
+    <div id="kellppanjang" class="hidden">
+        <div class="container1">
+            <h2> Keliling Persegi Panjang </h2>
+        </div>
+        <div class="container">
+            <img src="aset/ppanjang.png" width="400" height="200">
+            <h5> Rumus Keliling Persegi:</h5>
+            <h5> Keliling = 2 x (Panjang + Lebar) </h5>
+        </div>
+        <div class="hasil-kell-pp">
+            <h2> Hitung Keliling Persegi </h2>
+            <div class="formbox">
+                <input type="text" id="inputpan" required placeholder="Masukan panjang">
+                <input type="text" id="inputleb" required placeholder="Masukan lebar">
+                <p id="hasilkellpp"></p>
+                <button class="submit" id="hasilkellpp" onclick="showSection('hasil-kell-pp')"> Hitung </button>
+                <button class="reset" id="resetkellpp" onclick="showSection('ulang-kell-pp')"> Reset </button>
+            </div>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
+
